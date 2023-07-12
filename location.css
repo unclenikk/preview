@@ -1,0 +1,260 @@
+/* reset css basis property */
+html {
+    font-size: 62.5%;
+    font-family: inherit;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  img,picture {
+    display: block;
+    width: 100%;
+  }
+  
+  /* root for every size */
+  :root {
+    --fs-h1: 5rem;
+    --fs-h2: 3.2rem;
+    --fs-a-buuton:2rem;
+    --fs-h5-footer: 1.6rem;
+    --fs-p: 1.8rem;
+  
+    --clr-white: #FFFFFF;
+    --clr-black:#151515;
+    --clr-gray: #444444;
+    --clr-gold: #D5966C;
+  }
+  
+  @media (min-width:48em) {
+    :root {
+      --fs-h1: 5.5rem;
+    }
+  }
+  
+  @media (min-width:90em) {
+    :root {
+      --fs-h1: 7rem;
+      --fs-h2:3.6rem;
+      --fs-p:2.2rem;
+      --fs-h5-footer: 1.8rem;
+    }
+  }
+  
+  /* typography style h1,h2,h5,p*/
+  h1,h2,a {
+    font-size: var(--fs-h1);
+    font-family: 'Big Shoulders Display','cursive';
+    font-weight: 900;
+    color: var(--clr-white);
+  }
+  
+  h2 {
+    font-size: var(--fs-h2);
+    color: var(--clr-gold);
+  }
+  
+  p {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: var(--fs-p);
+    color: var(--clr-white);
+    line-height: 28px;
+  }
+  
+  h5 {
+    font-size: var(--fs-h5-footer);
+    color: var(--clr-black);
+    line-height: 2.6rem;
+  }
+  
+  /* section one  */
+  .one {
+    position: relative;
+  }
+  
+  button {
+    position: absolute;
+    top: 0;
+    left: 5.6rem;
+    background-color: var(--clr-black);
+    width: 20rem;
+    height: 7rem;
+  }
+  
+  /* media query for tablet  button*/
+  @media (min-width:48em) {
+    button {
+      margin-left: 4rem ;
+    }
+  }
+  
+  /* media query for desktop  button*/
+  @media (min-width:90em) {
+    button {
+      margin-left: 15.6rem ;
+    }
+  }
+  
+  /* butons a tag */
+  a {
+    letter-spacing: 3.63636px;
+    text-decoration: none;
+    color: var(--clr-white);
+    font-size: var(--fs-a-buuton);
+    font-weight: 800;
+  }
+  
+  /* psevdo seleqtor for button */
+  button::before {
+    content: url("assets/icon-arrow-left.svg");
+    position: absolute;
+    width: 5.6rem;
+    height: 7rem;
+    background-color: var(--clr-gold);
+    line-height: 8rem;
+    top: -1px;
+    left: -5.6rem;
+  }
+  
+  /* hover button */
+  button:hover {
+    background-color: var(--clr-gold);
+    cursor: pointer;
+  }
+  
+  /* hover button */
+  button:hover::before {
+    background-color: var(--clr-black);
+  }
+  
+  /* section two color, padding */
+  .two {
+    background-color: var(--clr-black);
+    padding: 0 1.6rem 5.6rem 0;
+  }
+  
+  .two h1 {
+    text-transform: uppercase;
+    padding: 4.8rem 0;
+  }
+  
+  /* text style section two */
+  .black-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* media query for tablet section one, two max-width and flex */
+  @media (min-width:48em) {
+    .one {
+      max-width: 768px;
+    }
+    
+    .two {
+      padding: 8.8rem 4rem 8rem 3.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items:start;
+      max-width: 768px;
+    }
+  
+    .two h1 {
+      width: min-content;
+      padding: 0;
+    }
+  
+    .black-text {
+      width: 39.8rem;
+    }
+  }
+  
+  /* for desktop padding */
+  @media (min-width:90em) {
+    .two{
+      padding: 10.4rem 16.5rem 12.8rem 16.5rem;
+    }
+  }
+  
+  /* footer flex paddding */
+  footer {
+    background-color: var(--clr-gold);
+    display: flex;
+    flex-direction: column;
+    gap: 3.8rem;
+    padding: 4.8rem 3.2rem;
+  }
+  
+  footer p {
+    color: var(--clr-black);
+  }
+  
+  .logo-footer {
+    width: 110px;
+    height: 40px;
+  }
+  
+  /* div for icons */
+  .div-icon {
+    width: 100px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* icone hover */
+  .icone path{
+    fill: black;
+  }
+  
+  .icone path:hover{
+    fill: var(--clr-white);
+    cursor: pointer;
+  }
+  
+  /* footer flex, width, max-width */
+  @media (min-width:48em) {
+    footer {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 11rem;
+      max-width: 768px;
+    }
+  
+    footer p {
+      width: 28.1rem;
+    }
+  }
+  
+  /* desktop padding, width */
+  @media (min-width:90em) {
+    footer {
+    width: 144rem;
+    padding: 8rem 16.5rem;
+    }
+  
+    footer p {
+      width: 43rem;
+    }
+  }
+  
+  /* max-width all page */
+  @media (min-width:90em) {
+    .one, .two, footer{
+      max-width: 144rem;
+    }
+  }
+  
+  
+  
